@@ -1,0 +1,227 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  max-height: 100vh;
+  overflow-x: hidden;
+  background: none;
+}
+.logo {
+  /* margin: 0 auto;
+   min-width: auto; */
+  border-radius: 50%;
+  height: 15em;
+  max-width: 300px;
+  position: relative;
+  font-family: arial;
+  font-size: 17.3px;
+  position: relative;
+  margin: 0 auto;
+}
+.logo svg {
+  display: block;
+  position: relative;
+}
+.white {
+  fill: white;
+  transition: 0.3s;
+}
+.logo svg.nav {
+  fill: black;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  animation: spin 1000s linear infinite;
+  z-index: 4;
+  animation-name: spin;
+  animation-duration: 15000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  overflow: visible;
+  pointer-events: none;
+}
+.logo svg.nav path {
+  fill: none;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 240px) and (max-width: 550px) {
+  .logo {
+    /* height: 17em;
+     width: 17em; */
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+  .logo {
+    /* height: 30em;
+     width: 30em; */
+  }
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  .logo {
+    height: 35em;
+    width: 35em;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* MODAL */
+.modalInfo {
+  /*position:relative;*/
+}
+.infoButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: Transparent;
+  color: black;
+  font-size: 2.5em;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+.infoContainer {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+}
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+  background-color: #E21118;
+}
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+.modal.right .modal-body {
+  margin: auto;
+  text-align: center;
+  color: white;
+  background-color: black;
+  height: 100%;
+  padding: 0;
+  z-index: 999999 !important;
+}
+.modal {
+  z-index: 4;
+  overflow: hidden;
+}
+.modal-backdrop {
+  display: none;
+}
+/*Right*/
+.modal.right.fade .modal-dialog {
+  /* right: -320px; */
+  -webkit-transition: opacity 0.3s linear, right 0s ease-out;
+  -moz-transition: opacity 0.3s linear, right 0s ease-out;
+  -o-transition: opacity 0.3s linear, right 0s ease-out;
+  transition: opacity 0.3s linear, right 0s ease-out;
+}
+.modal.right.fade.in .modal-dialog {
+  right: 0;
+}
+/* ----- MODAL STYLE ----- */
+.modal-content {
+  background-color: #E21118;
+  border-radius: 0;
+  border: none;
+  overflow: hidden;
+}
+.modal-header {
+  position: absolute;
+  width: 100%;
+  border-bottom-style: none;
+  padding: 60;
+}
+.close {
+  color: #FFFFFF;
+  height: 100%;
+  font-size: 80px;
+}
+.modal-header .close {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 100000000;
+  font-size: 2.5em;
+  color: white;
+  opacity: 1;
+  font-family: BasisGrotesquePro-Regular;
+}
+.letter {
+  position: relative;
+  font-size: 1.05em;
+  padding: 0 30%;
+}
+p {
+  margin: 0;
+}
+.ita {
+  font-family: BasisGrotesquePro-Italic;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 240px) and (max-width: 550px) {
+  .letter {
+    font-size: 0.9em;
+    padding: 0 15%;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+  .letter {
+    font-size: 1.12em;
+  }
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  .letter {
+    font-size: 1.3em;
+  }
+}
+#content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 50px;
+}
+canvas{
+  width: 100%;
+  min-height: 100%
+}
+.cell {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#canvas-2 canvas{
+  border: 1px solid #ccc;
+}
+
+#p5Canvas1 canvas{
+  border: 1px solid black;
+}
