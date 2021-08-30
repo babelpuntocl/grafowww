@@ -6,6 +6,12 @@ html, body {
   overflow-x: hidden;
   background: none;
 }
+.button{
+  background: #333;
+}
+.button:hover,.button:focus{
+  background: #000;
+}
 .logo {
   /* margin: 0 auto;
    min-width: auto; */

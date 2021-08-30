@@ -68,10 +68,10 @@ const c3 = ( canvas3 ) => {
     canvas3.text("random", X, Y);
     canvas3.textSize(Z);
   };
-  canvas3.mousePressed = () => {
-  // set canvas background will "clear" the canvas
-    canvas3.background(255);
-  };
+  // canvas3.mousePressed = () => {
+  // // set canvas background will "clear" the canvas
+  //   canvas3.background(255);
+  // };
 };
 
 let myp5c3 = new p5(c3,document.getElementById('p5Canvas3'));
@@ -84,16 +84,17 @@ let myp5c3 = new p5(c3,document.getElementById('p5Canvas3'));
 
 
 const c4 = ( canvas4 ) => {
-  let img;
-  canvas4.preload = () => {
-    img = canvas4.loadImage('pics/image.jpg');
-  };
+  var scribble = new Scribble( canvas4 );
+  // canvas4.preload = () => {
+  //   img = canvas4.loadImage('pics/image.jpg');
+  // };
   canvas4.setup = () => {
     canvas4.createCanvas(w,h);
     canvas4.imageMode(canvas4.CENTER);
+    scribble.scribbleLine( 0, 0, canvas4.width, canvas4.height );
   };
   canvas4.draw = () => {
-    canvas4.image(img, canvas4.width/2, canvas4.height/2, img.width, img.height);
+    //canvas4.image(img, canvas4.width/2, canvas4.height/2, img.width, img.height);
   };
 };
 
@@ -105,8 +106,7 @@ let myp5c4 = new p5(c4,document.getElementById('p5Canvas4'));
 
 
 
-// var bubbles = [];
-//
+
 // const cXX = ( canvasXX ) => {
 //   canvasXX.setup = () => {
 //     canvasXX.createCanvas(w,h);
